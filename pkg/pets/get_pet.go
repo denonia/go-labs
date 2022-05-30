@@ -20,7 +20,7 @@ func (h handler) GetPet(c *gin.Context) {
 
 	dto := GetPetDto{
 		Name: pet.Name,
-		OwnerName: pet.OwnerName,
+		OwnerID: pet.OwnerID,
 		Kind: pet.Kind,
 		Breed: pet.Breed,
 		BirthDate: pkg.JSONDate{pet.BirthDate},

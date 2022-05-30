@@ -10,7 +10,7 @@ import (
 
 type UpdatePetDto struct {
 	Name      string       `json:"name"`
-	OwnerName string       `json:"ownerName"`
+	OwnerID   uint         `json:"ownerId"`
 	Kind      string       `json:"kind"`
 	Breed     string       `json:"breed"`
 	BirthDate pkg.JSONDate `json:"birthDate"`
@@ -33,7 +33,7 @@ func (h handler) UpdatePet(c *gin.Context) {
     }
 
 	pet.Name = body.Name
-	pet.OwnerName = body.OwnerName
+	pet.OwnerID = body.OwnerID
 	pet.Kind = body.Kind
 	pet.Breed = body.Breed
 	pet.BirthDate = body.BirthDate.Time

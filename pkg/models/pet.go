@@ -8,11 +8,11 @@ import (
 
 type Pet struct {
 	gorm.Model
-	Name string `json:"name"`
+	Sessions  []Session  `gorm:"foreignKey:PetID"`
+	OwnerID   uint       `gorm:"not_null"`
 
-	// to be replaced with id
-	OwnerName string    `json:"ownerName"`
-	Kind      string    `json:"kind"`
-	Breed     string    `json:"breed"`
-	BirthDate time.Time `json:"birthDate"`
+	Name 	  string 	`gorm:"not_null"`
+	Kind      string    `gorm:"not_null"`
+	Breed     string    `gorm:"not_null"`
+	BirthDate time.Time `gorm:"not_null"`
 }

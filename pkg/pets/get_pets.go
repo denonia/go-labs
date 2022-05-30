@@ -10,7 +10,7 @@ import (
 
 type GetPetDto struct {
 	Name 	  string 	`json:"name"`
-	OwnerName string 	`json:"ownerName"`
+	OwnerID   uint  	`json:"ownerId"`
 	Kind      string    `json:"kind"`
 	Breed     string    `json:"breed"`
 	BirthDate pkg.JSONDate `json:"birthDate"`
@@ -28,7 +28,7 @@ func (h handler) GetPets(c *gin.Context) {
 	for i := 0; i < len(pets); i++ {
 		petDtos = append(petDtos, GetPetDto{
 			Name: pets[i].Name,
-			OwnerName: pets[i].OwnerName,
+			OwnerID: pets[i].OwnerID,
 			Kind: pets[i].Kind,
 			Breed: pets[i].Breed,
 			BirthDate: pkg.JSONDate{pets[i].BirthDate},

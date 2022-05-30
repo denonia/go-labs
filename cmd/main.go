@@ -7,6 +7,8 @@ import (
 
 	"github.com/denonia/go-labs/pkg/db"
 	"github.com/denonia/go-labs/pkg/pets"
+	"github.com/denonia/go-labs/pkg/sessions"
+	"github.com/denonia/go-labs/pkg/users"
 	"github.com/gin-gonic/gin"
 	"github.com/joho/godotenv"
 )
@@ -28,6 +30,8 @@ func main() {
 	r := gin.Default()
 
 	pets.RegisterRoutes(r, db)
+	sessions.RegisterRoutes(r, db)
+	users.RegisterRoutes(r, db)
 
 	r.Run()
 }

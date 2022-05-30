@@ -7,11 +7,11 @@ GET http://localhost:8080/pets/3
 POST http://localhost:8080/pets
 
 {
-    "name": "Barsique",
-    "ownerName": "Ivan",
+    "name": "Bob",
+    "ownerId": 1,
     "kind": "Dog",
     "breed": "Labrador",
-    "birthDate": "2022-02-24"
+    "birthDate": "2022-08-12"
 }
 
 ###
@@ -27,3 +27,26 @@ PUT http://localhost:8080/pets/3
 
 ###
 DELETE http://localhost:8080/pets/1
+
+###
+GET http://localhost:8080/sessions
+
+###
+POST http://localhost:8080/sessions
+
+{
+    "petId": 2,
+    "sitterId": 1,
+    "startDate": "2022-02-24T00:00:00Z",
+    "endDate": "2022-02-24T00:20:00Z"
+}
+
+###
+POST http://localhost:8080/users
+
+{
+    "name": "Ivan",
+    "phoneNumber": "+380991334803"
+}
+###
+GET http://localhost:8080/users/1

@@ -10,7 +10,7 @@ import (
 
 type AddPetDto struct {
 	Name      string       `json:"name"`
-	OwnerName string       `json:"ownerName"`
+	OwnerID   uint         `json:"ownerId"`
 	Kind      string       `json:"kind"`
 	Breed     string       `json:"breed"`
 	BirthDate pkg.JSONDate `json:"birthDate"`
@@ -26,7 +26,7 @@ func (h handler) AddPet(c *gin.Context) {
 
 	pet := models.Pet{
 		Name:      body.Name,
-		OwnerName: body.OwnerName,
+		OwnerID:   body.OwnerID,
 		Kind:      body.Kind,
 		Breed:     body.Breed,
 		BirthDate: body.BirthDate.Time,
