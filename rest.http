@@ -1,15 +1,28 @@
 GET http://localhost:8080/pets
 
 ###
+GET http://localhost:8080/pets/3
+
+###
 POST http://localhost:8080/pets
 
 {
-    "id": "4",
-    "name": "Newbie",
-    "ownerName": "Dima",
-    "kind": "Cat",
-    "breed": "Idk",
-    "birthDate": "2018-03-12"
+    "name": "Barsique",
+    "ownerName": "Ivan",
+    "kind": "Dog",
+    "breed": "Labrador",
+    "birthDate": "2022-02-24"
+}
+
+###
+PUT http://localhost:8080/pets/3
+
+{
+    "name": "Barsique 2",
+    "ownerName": "Ivan",
+    "kind": "Dog",
+    "breed": "Labrador",
+    "birthDate": "2022-02-24"
 }
 
 ###
