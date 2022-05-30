@@ -1,0 +1,16 @@
+GET http://localhost:8080/pets
+
+###
+POST http://localhost:8080/pets
+
+{
+    "id": "4",
+    "name": "Newbie",
+    "ownerName": "Dima",
+    "kind": "Cat",
+    "breed": "Idk",
+    "birthDate": "2018-03-12"
+}
+
+###
+DELETE http://localhost:8080/pets/1
