@@ -5,6 +5,7 @@ GET http://localhost:8080/pets/3
 
 ###
 POST http://localhost:8080/pets
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NTQwMjE4MDB9.81VOIdqQvIQJq37LiZN-0NxWFKhYQjBT7FEstl4bOuE
 
 {
     "name": "Bob",
@@ -50,3 +51,7 @@ POST http://localhost:8080/users
 }
 ###
 GET http://localhost:8080/users/1
+
+
+###
+POST http://localhost:8080/auth

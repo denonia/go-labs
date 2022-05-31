@@ -1,6 +1,7 @@
 package users
 
 import (
+	"github.com/denonia/go-labs/pkg/auth"
 	"github.com/gin-gonic/gin"
 	"gorm.io/gorm"
 )
@@ -15,6 +16,6 @@ func RegisterRoutes(r *gin.Engine, db *gorm.DB) {
 	}
 
 	routes := r.Group("/users")
-	routes.POST("/", h.AddUser)
 	routes.GET("/:id", h.GetUser)
+	routes.POST("/", h.AddUser, auth.AuthorizationMiddleware)
 }

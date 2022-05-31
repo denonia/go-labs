@@ -5,6 +5,7 @@ import (
 	"log"
 	"os"
 
+	"github.com/denonia/go-labs/pkg/auth"
 	"github.com/denonia/go-labs/pkg/db"
 	"github.com/denonia/go-labs/pkg/pets"
 	"github.com/denonia/go-labs/pkg/sessions"
@@ -29,6 +30,7 @@ func main() {
 
 	r := gin.Default()
 
+	auth.RegisterRoutes(r, db)
 	pets.RegisterRoutes(r, db)
 	sessions.RegisterRoutes(r, db)
 	users.RegisterRoutes(r, db)

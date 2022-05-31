@@ -1,6 +1,7 @@
 package sessions
 
 import (
+	"github.com/denonia/go-labs/pkg/auth"
 	"github.com/gin-gonic/gin"
 	"gorm.io/gorm"
 )
@@ -15,9 +16,6 @@ func RegisterRoutes(r *gin.Engine, db *gorm.DB) {
 	}
 
 	routes := r.Group("/sessions")
-	routes.POST("/", h.AddSession)
 	routes.GET("/", h.GetSessions)
-	// routes.GET("/:id", h.GetSession)
-	// routes.PUT("/:id", h.UpdatePet)
-	// routes.DELETE("/:id", h.DeletePet)
+	routes.POST("/", h.AddSession, auth.AuthorizationMiddleware)
 }
