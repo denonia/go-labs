@@ -8,7 +8,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-type GetPetDto struct {
+type GetPetsDto struct {
 	Name 	  string 	`json:"name"`
 	OwnerID   uint  	`json:"ownerId"`
 	Kind      string    `json:"kind"`
@@ -24,9 +24,9 @@ func (h handler) GetPets(c *gin.Context) {
         return
     }
 
-	var petDtos []GetPetDto
+	var petDtos []GetPetsDto
 	for i := 0; i < len(pets); i++ {
-		petDtos = append(petDtos, GetPetDto{
+		petDtos = append(petDtos, GetPetsDto{
 			Name: pets[i].Name,
 			OwnerID: pets[i].OwnerID,
 			Kind: pets[i].Kind,

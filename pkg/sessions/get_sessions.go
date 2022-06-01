@@ -11,10 +11,10 @@ import (
 )
 
 type GetSessionDto struct {
-	Sitter    GetSitterDto	 `json:"sitter"`
-	Pet 	  pets.GetPetDto `json:"pet"`
-	StartDate time.Time 	 `json:"startDate"`
-	EndDate	  time.Time 	 `json:"endDate"`
+	Sitter    GetSitterDto	  `json:"sitter"`
+	Pet 	  pets.GetPetsDto `json:"pet"`
+	StartDate time.Time 	  `json:"startDate"`
+	EndDate	  time.Time 	  `json:"endDate"`
 }
 
 type GetSitterDto struct {
@@ -44,7 +44,7 @@ func (h handler) GetSessions(c *gin.Context) {
 			continue
 		}
 
-		petDto := pets.GetPetDto{
+		petDto := pets.GetPetsDto{
 			Name: pet.Name,
 			OwnerID: pet.OwnerID,
 			Kind: pet.Kind,

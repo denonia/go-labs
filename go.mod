@@ -5,6 +5,19 @@ go 1.17
 require github.com/gin-gonic/gin v1.8.0
 
 require (
+	github.com/glebarez/go-sqlite v1.17.2 // indirect
+	github.com/glebarez/sqlite v1.4.5 // indirect
+	github.com/go-sql-driver/mysql v1.6.0 // indirect
+	github.com/google/uuid v1.3.0 // indirect
+	github.com/remyoudompheng/bigfft v0.0.0-20200410134404-eec4a21b6bb0 // indirect
+	gorm.io/driver/mysql v1.3.4 // indirect
+	modernc.org/libc v1.16.8 // indirect
+	modernc.org/mathutil v1.4.1 // indirect
+	modernc.org/memory v1.1.1 // indirect
+	modernc.org/sqlite v1.17.3 // indirect
+)
+
+require (
 	github.com/gin-contrib/sse v0.1.0 // indirect
 	github.com/go-playground/locales v0.14.0 // indirect
 	github.com/go-playground/universal-translator v0.18.0 // indirect
